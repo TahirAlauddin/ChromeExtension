@@ -436,10 +436,6 @@ function disableExtension () {
 
 }
 
-if (extensionIsToggled) {
-  enableExtension()
-}
-
 chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
   switch (message.action) {
       case 'changeColor':
@@ -485,4 +481,10 @@ document.addEventListener('DOMContentLoaded', () => {
   div.classList.add('polygon-div')
   div.id = 'polygon-div'
   document.body.appendChild(div)
+
+  
+
+  if (extensionIsToggled) {
+    enableExtension()
+  }
 })
