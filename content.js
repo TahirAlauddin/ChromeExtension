@@ -458,8 +458,9 @@ chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
 
 document.addEventListener('keydown', function(event) {
   // Check if Control (or Command in Mac) and Alt (Option in Mac) are pressed along with 'A'
-  if ((event.ctrlKey || event.metaKey) && event.altKey && event.key === 'a') {
+  // if ((event.ctrlKey || event.metaKey) && event.altKey && event.key === 'a') {
   // if (event.ctrlKey && event.metaKey && event.key === 'a') {
+  if (event.ctrlKey && event.shiftKey && event.key === 'a') {
 
     console.log('Control + Alt + A was pressed');
     if (extensionIsToggled) {
