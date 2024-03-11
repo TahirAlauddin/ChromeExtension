@@ -462,8 +462,7 @@ document.addEventListener('keydown', function(event) {
   // ? Works on his computer
   // if (event.ctrlKey && event.metaKey && event.key === 'a') {
   // if (event.ctrlKey && event.shiftKey && event.key === 'a') {
-    console.log(event.key)
-  if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === '(') {
+  if ((event.ctrlKey || event.metaKey) && event.shiftKey && (event.key === '(' || event.key === '9')) {
 
     console.log('Control + Alt + A was pressed');
     if (extensionIsToggled) {
