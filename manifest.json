@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Ammotation",
+  "version": "2.0",
+  "description": "Draw shapes and text on any webpage.",
+  "permissions": ["scripting", "storage", "activeTab", "tabs"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["turf.js", "content.js", "script.js"]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "logo-without-bg.png",
+      "32": "logo-without-bg.png",
+      "48": "logo-without-bg.png"
+    }
+  }
+}

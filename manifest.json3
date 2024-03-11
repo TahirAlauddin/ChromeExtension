@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "The name of your extension",
+  "description": "The description of your extension",
+  "version": "1.0.0",
+  "permissions": ["scripting", "storage", "activeTab", "tabs"],
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png"
+  },
+  "action": {
+    "permissions": ["tabs"],
+		"default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "js": ["turf.js", "content.js", "script.js"],
+      "matches": ["<all_urls>"],
+      "run_at": "document_end"
+    }
+  ]
+}
